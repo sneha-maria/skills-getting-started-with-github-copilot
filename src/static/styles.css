@@ -89,10 +89,9 @@ section h3 {
 }
 
 .activity-card .participants ul {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none;
   margin: 0;
-  padding-left: 14px;
+  padding: 0;
   display: block;
 }
 
@@ -107,6 +106,43 @@ section h3 {
   transition:
     transform 120ms ease,
     box-shadow 120ms ease;
+}
+
+/* New participant item layout when using inline items with remove buttons */
+.participants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #eef0ff;
+  border-radius: 6px;
+}
+
+.participant-email {
+  color: #444;
+  word-break: break-all;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 .activity-card .participants li:hover {
